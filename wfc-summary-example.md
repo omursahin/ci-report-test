@@ -1,10 +1,18 @@
+<a name="wfc-top"></a>
+
 ## &#x274C; Found 529 potential faults
 
-**WFC report schema:** 0.0.1 &middot; **Created:** 2025-04-09T19:31:54.258Z &middot; **Execution time:** 1883h 20m 0s
+<sub>WFC report schema 0.0.1 &middot; created 2025-04-09T19:31:54.258Z</sub>
 
-**Interactive report:** [download the artifact](https://github.com/org/repo/actions/runs/1/artifacts/2), unzip it and open `low-code-index.html` in a browser.
+> [!CAUTION]
+> **529 potential faults** &middot; 1 fault type &middot; 62/67 endpoints affected &middot; 127 test cases &middot; &#x23F1; 1883h 20m 0s
 
-**Workflow run:** [https://github.com/org/repo/actions/runs/1](https://github.com/org/repo/actions/runs/1)
+[Faults](#user-content-wfc-faults) &middot; [Endpoints](#user-content-wfc-endpoints) &middot; [Tests](#user-content-wfc-tests) &middot; [Interactive report](https://github.com/omursahin/ci-report-test/actions/runs/1/artifacts/2)
+
+> [!TIP]
+> **Interactive report:** [download the artifact](https://github.com/omursahin/ci-report-test/actions/runs/1/artifacts/2), unzip it and open `low-code-index.html` in a browser.
+>
+> **Workflow run:** [https://github.com/omursahin/ci-report-test/actions/runs/1](https://github.com/omursahin/ci-report-test/actions/runs/1)
 
 ### Overview
 
@@ -25,17 +33,19 @@ Endpoints for which at least one generated test received a response in the given
 
 | Status | Endpoints | Ratio |
 | --- | --- | --- |
-| 2XX | 27/67 | 40% |
-| 3XX | 0/67 | 0% |
-| 4XX | 55/67 | 82% |
-| 5XX | 0/67 | 0% |
+| 2XX | 27/67 | <code>&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;</code> 40% |
+| 3XX | 0/67 | <code>&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;</code> 0% |
+| 4XX | 55/67 | <code>&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;&#x2591;</code> 82% |
+| 5XX | 0/67 | <code>&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;</code> 0% |
 
 ### Code coverage
 
 | Criterion | Covered | Total | Ratio |
 | --- | --- | --- | --- |
-| Line Coverage | 428 | 1229 | 35% |
-| Branch Coverage | 6 | 130 | 5% |
+| Line Coverage | 428 | 1229 | <code>&#x2588;&#x2588;&#x2588;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;</code> 35% |
+| Branch Coverage | 6 | 130 | <code>&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;</code> 5% |
+
+<a name="wfc-faults"></a>
 
 ### Faults by category
 
@@ -45,627 +55,169 @@ Endpoints for which at least one generated test received a response in the given
 
 ### Warnings (1)
 
-- **FUZZER**: No authentication info was provided. Unless you are testing an example API, you should setup some authentication info for different users. If this is the first time you are using EvoMaster, and you just want to get a feeling of how it works, then ignore this warning. However, to get better results, you will need setup authentication info, eventually. More info is currently available at https://github.com/WebFuzzing/EvoMaster/blob/master/docs/auth.md
+> [!WARNING]
+> - **FUZZER**: No authentication info was provided. Unless you are testing an example API, you should setup some authentication info for different users. If this is the first time you are using EvoMaster, and you just want to get a feeling of how it works, then ignore this warning. However, to get better results, you will need setup authentication info, eventually. More info is currently available at https://github.com/WebFuzzing/EvoMaster/blob/master/docs/auth.md
+
+### Fault details (529)
 
 <details>
-<summary>Fault details (529)</summary>
+<summary><b>F200</b> Schema Violation: Received A Response From API With A Structure/Data That Is Not Matching Its Schema &middot; 529 faults on 62 endpoints</summary>
 
-| Fault | Operation | Context | Test cases |
+| Operation | Faults | Example | Test cases |
 | --- | --- | --- | --- |
-| F200 | <code>DELETE:/app/api/assignments/{employeeId}/{projectId}/{commitDate}</code> | DELETE:/app/api/assignments/{employeeId}/{projectId}/{commitDate} -&gt; Response status 400 not defined for path '/api/assignments/{employeeId}/{projectId}/{commitDate}'. | [<code>faults.java#test\_65</code>](#user-content-test-faults-java-test-65) |
-| F200 | <code>DELETE:/app/api/assignments/delete/{employeeId}/{projectId}/{commitDate}</code> | DELETE:/app/api/assignments/delete/{employeeId}/{projectId}/{commitDate} -&gt; Response status 400 not defined for path '/api/assignments/delete/{employeeId}/{projectId}/{commitDate}'. | [<code>faults.java#test\_21</code>](#user-content-test-faults-java-test-21) |
-| F200 | <code>DELETE:/app/api/credentials/{id}</code> | DELETE:/app/api/credentials/{id} -&gt; Response status 400 not defined for path '/api/credentials/{id}'. | [<code>faults.java#test\_71</code>](#user-content-test-faults-java-test-71), [<code>faults.java#test\_91</code>](#user-content-test-faults-java-test-91) |
-| F200 | <code>DELETE:/app/api/credentials/delete/{id}</code> | DELETE:/app/api/credentials/delete/{id} -&gt; Response status 400 not defined for path '/api/credentials/delete/{id}'. | [<code>faults.java#test\_33</code>](#user-content-test-faults-java-test-33) |
-| F200 | <code>DELETE:/app/api/credentials/username/{username}</code> | DELETE:/app/api/credentials/username/{username} -&gt; Response status 400 not defined for path '/api/credentials/username/{username}'. | [<code>faults.java#test\_38</code>](#user-content-test-faults-java-test-38) |
-| F200 | <code>DELETE:/app/api/departments/{id}</code> | DELETE:/app/api/departments/{id} -&gt; Response status 400 not defined for path '/api/departments/{id}'. | [<code>faults.java#test\_67</code>](#user-content-test-faults-java-test-67) |
-| F200 | <code>DELETE:/app/api/departments/delete/{id}</code> | DELETE:/app/api/departments/delete/{id} -&gt; Response status 400 not defined for path '/api/departments/delete/{id}'. | [<code>faults.java#test\_23</code>](#user-content-test-faults-java-test-23) |
-| F200 | <code>DELETE:/app/api/employees/{id}</code> | DELETE:/app/api/employees/{id} -&gt; Response status 400 not defined for path '/api/employees/{id}'. | [<code>faults.java#test\_24</code>](#user-content-test-faults-java-test-24) |
-| F200 | <code>DELETE:/app/api/employees/delete/{id}</code> | DELETE:/app/api/employees/delete/{id} -&gt; Response status 400 not defined for path '/api/employees/delete/{id}'. | [<code>faults.java#test\_72</code>](#user-content-test-faults-java-test-72) |
-| F200 | <code>DELETE:/app/api/employees/username/{username}</code> | DELETE:/app/api/employees/username/{username} -&gt; Response status 400 not defined for path '/api/employees/username/{username}'. | [<code>faults.java#test\_59</code>](#user-content-test-faults-java-test-59), [<code>faults.java#test\_62</code>](#user-content-test-faults-java-test-62) |
-| F200 | <code>DELETE:/app/api/locations/{id}</code> | DELETE:/app/api/locations/{id} -&gt; Response status 400 not defined for path '/api/locations/{id}'. | [<code>faults.java#test\_68</code>](#user-content-test-faults-java-test-68) |
-| F200 | <code>DELETE:/app/api/locations/delete/{id}</code> | DELETE:/app/api/locations/delete/{id} -&gt; Response status 400 not defined for path '/api/locations/delete/{id}'. | [<code>faults.java#test\_25</code>](#user-content-test-faults-java-test-25) |
-| F200 | <code>DELETE:/app/api/projects/{id}</code> | DELETE:/app/api/projects/{id} -&gt; Response status 400 not defined for path '/api/projects/{id}'. | [<code>faults.java#test\_37</code>](#user-content-test-faults-java-test-37), [<code>faults.java#test\_56</code>](#user-content-test-faults-java-test-56) |
-| F200 | <code>DELETE:/app/api/projects/delete/{id}</code> | DELETE:/app/api/projects/delete/{id} -&gt; Response status 400 not defined for path '/api/projects/delete/{id}'. | [<code>faults.java#test\_26</code>](#user-content-test-faults-java-test-26) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/0/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/0/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/0/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/1/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/1/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/10/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/10/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/10/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/11/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/11/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/11/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/12/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/12/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/12/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/13/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/13/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/13/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/14/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/14/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/14/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/15/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/15/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/15/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/16/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/16/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/16/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/17/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/17/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/17/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/18/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/18/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/18/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/19/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/19/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/19/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/2/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/2/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/2/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/20/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/20/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/20/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/21/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/21/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/21/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/22/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/22/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/22/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/23/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/23/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/23/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/24/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/24/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/24/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/25/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/25/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/25/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/26/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/26/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/26/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/27/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/27/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/27/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/28/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/28/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/28/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/29/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/29/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/29/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/3/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/3/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/3/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/30/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/30/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/30/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/31/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/31/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/31/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/32/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/32/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/32/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/33/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/33/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/33/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/34/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/34/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/34/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/35/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/35/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/35/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/36/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/36/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/36/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/36/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/37/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/37/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/37/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/37/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/38/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/38/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/38/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/38/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/39/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/39/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/39/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/39/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/4/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/4/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/4/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/40/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/40/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/40/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/40/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/41/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/41/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/41/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/41/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/42/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/42/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/42/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/42/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/43/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/43/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/43/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/43/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/44/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/44/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/44/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/44/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/45/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/45/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/45/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/45/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/46/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/46/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/46/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/46/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/47/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/47/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/47/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/48/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/48/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/48/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/49/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/49/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/49/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/5/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/5/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/5/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/50/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/50/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/50/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/51/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/51/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/51/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/52/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/52/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/52/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/53/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/53/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/53/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/53/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/54/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/54/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/54/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/54/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/55/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/55/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/55/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/55/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/56/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/56/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/56/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/56/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/57/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/57/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/57/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/57/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/58/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/58/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/58/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/58/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/6/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/6/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/6/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/7/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/7/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/8/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/8/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/8/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/9/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/9/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments</code> | GET:/app/api/assignments -&gt; \[Path '/collection/9/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/0/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/0/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/0/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/1/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/1/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/10/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/10/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/10/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/11/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/11/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/11/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/12/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/12/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/12/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/13/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/13/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/13/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/14/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/14/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/14/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/15/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/15/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/15/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/16/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/16/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/16/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/17/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/17/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/17/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/18/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/18/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/18/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/19/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/19/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/19/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/2/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/2/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/2/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/20/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/20/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/20/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/21/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/21/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/21/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/22/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/22/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/22/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/23/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/23/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/23/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/24/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/24/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/24/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/25/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/25/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/25/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/26/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/26/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/26/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/27/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/27/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/27/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/28/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/28/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/28/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/29/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/29/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/29/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/3/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/3/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/3/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/30/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/30/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/30/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/31/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/31/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/31/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/32/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/32/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/32/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/33/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/33/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/33/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/34/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/34/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/34/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/35/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/35/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/35/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/36/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/36/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/36/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/36/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/37/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/37/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/37/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/37/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/38/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/38/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/38/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/38/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/39/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/39/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/39/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/39/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/4/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/4/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/4/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/40/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/40/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/40/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/40/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/41/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/41/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/41/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/41/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/42/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/42/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/42/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/42/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/43/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/43/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/43/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/43/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/44/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/44/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/44/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/44/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/45/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/45/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/45/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/45/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/46/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/46/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/46/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/46/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/47/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/47/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/47/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/48/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/48/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/48/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/49/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/49/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/49/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/5/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/5/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/5/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/50/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/50/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/50/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/51/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/51/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/51/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/52/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/52/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/52/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/53/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/53/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/53/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/53/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/54/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/54/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/54/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/54/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/55/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/55/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/55/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/55/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/56/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/56/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/56/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/56/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/57/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/57/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/57/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/57/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/58/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/58/employee/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/58/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/58/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/6/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/6/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/6/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/7/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/7/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/8/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/8/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/8/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/9/commitMgrDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/9/employee/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/</code> | GET:/app/api/assignments/ -&gt; \[Path '/collection/9/employee/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
-| F200 | <code>GET:/app/api/assignments/{employeeId}/{projectId}</code> | GET:/app/api/assignments/{employeeId}/{projectId} -&gt; Response status 400 not defined for path '/api/assignments/{employeeId}/{projectId}'. | [<code>faults.java#test\_18</code>](#user-content-test-faults-java-test-18) |
-| F200 | <code>GET:/app/api/assignments/{employeeId}/{projectId}/{commitDate}</code> | GET:/app/api/assignments/{employeeId}/{projectId}/{commitDate} -&gt; Response status 400 not defined for path '/api/assignments/{employeeId}/{projectId}/{commitDate}'. | [<code>faults.java#test\_31</code>](#user-content-test-faults-java-test-31) |
-| F200 | <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}</code> | GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId} -&gt; Response status 400 not defined for path '/api/assignments/data/project-commit/{employeeId}/{projectId}'. | [<code>faults.java#test\_30</code>](#user-content-test-faults-java-test-30), [<code>faults.java#test\_64</code>](#user-content-test-faults-java-test-64), [<code>faults.java#test\_70</code>](#user-content-test-faults-java-test-70) |
-| F200 | <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}/{commitDate}</code> | GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}/{commitDate} -&gt; Response status 400 not defined for path '/api/assignments/data/project-commit/{employeeId}/{projectId}/{commitDate}'. | [<code>faults.java#test\_63</code>](#user-content-test-faults-java-test-63), [<code>faults.java#test\_69</code>](#user-content-test-faults-java-test-69) |
-| F200 | <code>GET:/app/api/assignments/data/project-commit/{projectId}</code> | GET:/app/api/assignments/data/project-commit/{projectId} -&gt; Response status 400 not defined for path '/api/assignments/data/project-commit/{projectId}'. | [<code>faults.java#test\_55</code>](#user-content-test-faults-java-test-55) |
-| F200 | <code>GET:/app/api/credentials</code> | GET:/app/api/credentials -&gt; \[Path '/collection/14/password'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_11</code>](#user-content-test-faults-java-test-11) |
-| F200 | <code>GET:/app/api/credentials</code> | GET:/app/api/credentials -&gt; \[Path '/collection/14/role'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_11</code>](#user-content-test-faults-java-test-11) |
-| F200 | <code>GET:/app/api/credentials</code> | GET:/app/api/credentials -&gt; \[Path '/collection/14/username'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_11</code>](#user-content-test-faults-java-test-11) |
-| F200 | <code>GET:/app/api/credentials</code> | GET:/app/api/credentials -&gt; \[Path '/collection/15/username'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_11</code>](#user-content-test-faults-java-test-11) |
-| F200 | <code>GET:/app/api/credentials</code> | GET:/app/api/credentials -&gt; \[Path '/collection/16/role'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_11</code>](#user-content-test-faults-java-test-11) |
-| F200 | <code>GET:/app/api/credentials</code> | GET:/app/api/credentials -&gt; \[Path '/collection/16/username'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_11</code>](#user-content-test-faults-java-test-11) |
-| F200 | <code>GET:/app/api/credentials/</code> | GET:/app/api/credentials/ -&gt; \[Path '/collection/14/role'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_0</code>](#user-content-test-faults-java-test-0) |
-| F200 | <code>GET:/app/api/credentials/</code> | GET:/app/api/credentials/ -&gt; \[Path '/collection/14/username'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_0</code>](#user-content-test-faults-java-test-0) |
-| F200 | <code>GET:/app/api/credentials/{id}</code> | GET:/app/api/credentials/{id} -&gt; Response status 400 not defined for path '/api/credentials/{id}'. | [<code>faults.java#test\_34</code>](#user-content-test-faults-java-test-34) |
-| F200 | <code>GET:/app/api/credentials/username/{username}</code> | GET:/app/api/credentials/username/{username} -&gt; Response status 400 not defined for path '/api/credentials/username/{username}'. | [<code>faults.java#test\_40</code>](#user-content-test-faults-java-test-40), [<code>faults.java#test\_42</code>](#user-content-test-faults-java-test-42) |
-| F200 | <code>GET:/app/api/departments/{id}</code> | GET:/app/api/departments/{id} -&gt; Response status 400 not defined for path '/api/departments/{id}'. | [<code>faults.java#test\_27</code>](#user-content-test-faults-java-test-27) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/0/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/0/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/1/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/1/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/10/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/10/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/10/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/11/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/11/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/12/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/12/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/12/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/13/department'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/13/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/13/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/2/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/2/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/3/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/3/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/4/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/4/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/5/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/5/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/6/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/6/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/6/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/7/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/7/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/8/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/8/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/9/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/9/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees</code> | GET:/app/api/employees -&gt; \[Path '/collection/9/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/0/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/0/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/1/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/1/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/10/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/10/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/10/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/11/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/11/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/12/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/12/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/12/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/13/department'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/13/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/13/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/2/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/2/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/3/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/3/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/4/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/4/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/5/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/5/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/6/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/6/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/6/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/7/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/7/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/8/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/8/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/9/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/9/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/</code> | GET:/app/api/employees/ -&gt; \[Path '/collection/9/manager/manager'\] Instance type (null) does not match any allowed primitive type (allowed: \["object"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
-| F200 | <code>GET:/app/api/employees/{id}</code> | GET:/app/api/employees/{id} -&gt; Response status 400 not defined for path '/api/employees/{id}'. | [<code>faults.java#test\_35</code>](#user-content-test-faults-java-test-35) |
-| F200 | <code>GET:/app/api/employees/data/department/{departmentId}</code> | GET:/app/api/employees/data/department/{departmentId} -&gt; Response status 400 not defined for path '/api/employees/data/department/{departmentId}'. | [<code>faults.java#test\_22</code>](#user-content-test-faults-java-test-22) |
-| F200 | <code>GET:/app/api/employees/data/employee-project-data/{employeeId}</code> | GET:/app/api/employees/data/employee-project-data/{employeeId} -&gt; Response status 400 not defined for path '/api/employees/data/employee-project-data/{employeeId}'. | [<code>faults.java#test\_66</code>](#user-content-test-faults-java-test-66) |
-| F200 | <code>GET:/app/api/employees/data/manager-project-data/{employeeId}</code> | GET:/app/api/employees/data/manager-project-data/{employeeId} -&gt; \[Path '/collection/0/title'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_5</code>](#user-content-test-faults-java-test-5) |
-| F200 | <code>GET:/app/api/employees/data/manager-project-data/{employeeId}</code> | GET:/app/api/employees/data/manager-project-data/{employeeId} -&gt; \[Path '/collection/1/title'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_5</code>](#user-content-test-faults-java-test-5) |
-| F200 | <code>GET:/app/api/employees/data/manager-project-data/{employeeId}</code> | GET:/app/api/employees/data/manager-project-data/{employeeId} -&gt; \[Path '/collection/2/title'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_5</code>](#user-content-test-faults-java-test-5) |
-| F200 | <code>GET:/app/api/employees/data/manager-project-data/{employeeId}</code> | GET:/app/api/employees/data/manager-project-data/{employeeId} -&gt; Response status 400 not defined for path '/api/employees/data/manager-project-data/{employeeId}'. | [<code>faults.java#test\_32</code>](#user-content-test-faults-java-test-32) |
-| F200 | <code>GET:/app/api/employees/username/{username}</code> | GET:/app/api/employees/username/{username} -&gt; Response status 400 not defined for path '/api/employees/username/{username}'. | [<code>faults.java#test\_39</code>](#user-content-test-faults-java-test-39) |
-| F200 | <code>GET:/app/api/locations/{id}</code> | GET:/app/api/locations/{id} -&gt; Response status 400 not defined for path '/api/locations/{id}'. | [<code>faults.java#test\_57</code>](#user-content-test-faults-java-test-57) |
-| F200 | <code>GET:/app/api/projects</code> | GET:/app/api/projects -&gt; \[Path '/collection/9/endDate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_1</code>](#user-content-test-faults-java-test-1), [<code>faults.java#test\_2</code>](#user-content-test-faults-java-test-2) |
-| F200 | <code>GET:/app/api/projects</code> | GET:/app/api/projects -&gt; \[Path '/collection/9/startDate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_1</code>](#user-content-test-faults-java-test-1), [<code>faults.java#test\_2</code>](#user-content-test-faults-java-test-2) |
-| F200 | <code>GET:/app/api/projects/{id}</code> | GET:/app/api/projects/{id} -&gt; Response status 400 not defined for path '/api/projects/{id}'. | [<code>faults.java#test\_36</code>](#user-content-test-faults-java-test-36) |
-| F200 | <code>POST:/app/api/assignments</code> | POST:/app/api/assignments -&gt; Response status 400 not defined for path '/api/assignments'. | [<code>faults.java#test\_54</code>](#user-content-test-faults-java-test-54), [<code>faults.java#test\_76</code>](#user-content-test-faults-java-test-76), [<code>faults.java#test\_80</code>](#user-content-test-faults-java-test-80) (+5 more) |
-| F200 | <code>POST:/app/api/assignments/save</code> | POST:/app/api/assignments/save -&gt; Response status 400 not defined for path '/api/assignments/save'. | [<code>faults.java#test\_78</code>](#user-content-test-faults-java-test-78), [<code>faults.java#test\_98</code>](#user-content-test-faults-java-test-98) |
-| F200 | <code>POST:/app/api/authenticate</code> | POST:/app/api/authenticate -&gt; Response status 400 not defined for path '/api/authenticate'. | [<code>faults.java#test\_47</code>](#user-content-test-faults-java-test-47) |
-| F200 | <code>POST:/app/api/authenticate/</code> | POST:/app/api/authenticate/ -&gt; Response status 400 not defined for path '/api/authenticate/'. | [<code>faults.java#test\_94</code>](#user-content-test-faults-java-test-94), [<code>faults.java#test\_97</code>](#user-content-test-faults-java-test-97) |
-| F200 | <code>POST:/app/api/credentials</code> | POST:/app/api/credentials -&gt; \[Path '/password'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_7</code>](#user-content-test-faults-java-test-7) |
-| F200 | <code>POST:/app/api/credentials</code> | POST:/app/api/credentials -&gt; \[Path '/role'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_6</code>](#user-content-test-faults-java-test-6) |
-| F200 | <code>POST:/app/api/credentials</code> | POST:/app/api/credentials -&gt; \[Path '/username'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_6</code>](#user-content-test-faults-java-test-6) |
-| F200 | <code>POST:/app/api/credentials</code> | POST:/app/api/credentials -&gt; Response status 400 not defined for path '/api/credentials'. | [<code>faults.java#test\_11</code>](#user-content-test-faults-java-test-11), [<code>faults.java#test\_51</code>](#user-content-test-faults-java-test-51) |
-| F200 | <code>POST:/app/api/credentials/save</code> | POST:/app/api/credentials/save -&gt; \[Path '/password'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_4</code>](#user-content-test-faults-java-test-4) |
-| F200 | <code>POST:/app/api/credentials/save</code> | POST:/app/api/credentials/save -&gt; \[Path '/role'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_4</code>](#user-content-test-faults-java-test-4) |
-| F200 | <code>POST:/app/api/credentials/save</code> | POST:/app/api/credentials/save -&gt; \[Path '/username'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_4</code>](#user-content-test-faults-java-test-4) |
-| F200 | <code>POST:/app/api/credentials/save</code> | POST:/app/api/credentials/save -&gt; Response status 400 not defined for path '/api/credentials/save'. | [<code>faults.java#test\_87</code>](#user-content-test-faults-java-test-87) |
-| F200 | <code>POST:/app/api/departments</code> | POST:/app/api/departments -&gt; \[Path '/location/adr'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_9</code>](#user-content-test-faults-java-test-9) |
-| F200 | <code>POST:/app/api/departments</code> | POST:/app/api/departments -&gt; \[Path '/location/postalCode'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_3</code>](#user-content-test-faults-java-test-3) |
-| F200 | <code>POST:/app/api/departments</code> | POST:/app/api/departments -&gt; Response status 400 not defined for path '/api/departments'. | [<code>faults.java#test\_79</code>](#user-content-test-faults-java-test-79), [<code>faults.java#test\_106</code>](#user-content-test-faults-java-test-106) |
-| F200 | <code>POST:/app/api/departments/save</code> | POST:/app/api/departments/save -&gt; Response status 400 not defined for path '/api/departments/save'. | [<code>faults.java#test\_84</code>](#user-content-test-faults-java-test-84), [<code>faults.java#test\_103</code>](#user-content-test-faults-java-test-103) |
-| F200 | <code>POST:/app/api/employees</code> | POST:/app/api/employees -&gt; Response status 400 not defined for path '/api/employees'. | [<code>faults.java#test\_92</code>](#user-content-test-faults-java-test-92) |
-| F200 | <code>POST:/app/api/employees/save</code> | POST:/app/api/employees/save -&gt; Response status 400 not defined for path '/api/employees/save'. | [<code>faults.java#test\_52</code>](#user-content-test-faults-java-test-52), [<code>faults.java#test\_73</code>](#user-content-test-faults-java-test-73) |
-| F200 | <code>POST:/app/api/locations</code> | POST:/app/api/locations -&gt; Response status 400 not defined for path '/api/locations'. | [<code>faults.java#test\_75</code>](#user-content-test-faults-java-test-75), [<code>faults.java#test\_93</code>](#user-content-test-faults-java-test-93) |
-| F200 | <code>POST:/app/api/locations/save</code> | POST:/app/api/locations/save -&gt; Response status 400 not defined for path '/api/locations/save'. | [<code>faults.java#test\_43</code>](#user-content-test-faults-java-test-43) |
-| F200 | <code>POST:/app/api/projects</code> | POST:/app/api/projects -&gt; \[Path '/endDate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_15</code>](#user-content-test-faults-java-test-15) |
-| F200 | <code>POST:/app/api/projects</code> | POST:/app/api/projects -&gt; \[Path '/startDate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_10</code>](#user-content-test-faults-java-test-10), [<code>faults.java#test\_15</code>](#user-content-test-faults-java-test-15) |
-| F200 | <code>POST:/app/api/projects</code> | POST:/app/api/projects -&gt; Response status 400 not defined for path '/api/projects'. | [<code>faults.java#test\_19</code>](#user-content-test-faults-java-test-19), [<code>faults.java#test\_61</code>](#user-content-test-faults-java-test-61), [<code>faults.java#test\_104</code>](#user-content-test-faults-java-test-104) |
-| F200 | <code>POST:/app/api/projects/save</code> | POST:/app/api/projects/save -&gt; Response status 400 not defined for path '/api/projects/save'. | [<code>faults.java#test\_20</code>](#user-content-test-faults-java-test-20), [<code>faults.java#test\_60</code>](#user-content-test-faults-java-test-60) |
-| F200 | <code>PUT:/app/api/assignments</code> | PUT:/app/api/assignments -&gt; Response status 400 not defined for path '/api/assignments'. | [<code>faults.java#test\_41</code>](#user-content-test-faults-java-test-41), [<code>faults.java#test\_108</code>](#user-content-test-faults-java-test-108) |
-| F200 | <code>PUT:/app/api/assignments/update</code> | PUT:/app/api/assignments/update -&gt; Response status 400 not defined for path '/api/assignments/update'. | [<code>faults.java#test\_53</code>](#user-content-test-faults-java-test-53), [<code>faults.java#test\_77</code>](#user-content-test-faults-java-test-77), [<code>faults.java#test\_100</code>](#user-content-test-faults-java-test-100) |
-| F200 | <code>PUT:/app/api/credentials</code> | PUT:/app/api/credentials -&gt; Response status 400 not defined for path '/api/credentials'. | [<code>faults.java#test\_81</code>](#user-content-test-faults-java-test-81) |
-| F200 | <code>PUT:/app/api/credentials/update</code> | PUT:/app/api/credentials/update -&gt; \[Path '/username'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_8</code>](#user-content-test-faults-java-test-8) |
-| F200 | <code>PUT:/app/api/credentials/update</code> | PUT:/app/api/credentials/update -&gt; Response status 400 not defined for path '/api/credentials/update'. | [<code>faults.java#test\_88</code>](#user-content-test-faults-java-test-88) |
-| F200 | <code>PUT:/app/api/departments</code> | PUT:/app/api/departments -&gt; Response status 400 not defined for path '/api/departments'. | [<code>faults.java#test\_45</code>](#user-content-test-faults-java-test-45), [<code>faults.java#test\_46</code>](#user-content-test-faults-java-test-46), [<code>faults.java#test\_48</code>](#user-content-test-faults-java-test-48) (+1 more) |
-| F200 | <code>PUT:/app/api/departments/update</code> | PUT:/app/api/departments/update -&gt; Response status 400 not defined for path '/api/departments/update'. | [<code>faults.java#test\_85</code>](#user-content-test-faults-java-test-85), [<code>faults.java#test\_86</code>](#user-content-test-faults-java-test-86), [<code>faults.java#test\_90</code>](#user-content-test-faults-java-test-90) |
-| F200 | <code>PUT:/app/api/employees</code> | PUT:/app/api/employees -&gt; Response status 400 not defined for path '/api/employees'. | [<code>faults.java#test\_49</code>](#user-content-test-faults-java-test-49) |
-| F200 | <code>PUT:/app/api/employees/update</code> | PUT:/app/api/employees/update -&gt; Response status 400 not defined for path '/api/employees/update'. | [<code>faults.java#test\_50</code>](#user-content-test-faults-java-test-50) |
-| F200 | <code>PUT:/app/api/locations</code> | PUT:/app/api/locations -&gt; Response status 400 not defined for path '/api/locations'. | [<code>faults.java#test\_14</code>](#user-content-test-faults-java-test-14), [<code>faults.java#test\_102</code>](#user-content-test-faults-java-test-102) |
-| F200 | <code>PUT:/app/api/locations/update</code> | PUT:/app/api/locations/update -&gt; Response status 400 not defined for path '/api/locations/update'. | [<code>faults.java#test\_44</code>](#user-content-test-faults-java-test-44), [<code>faults.java#test\_96</code>](#user-content-test-faults-java-test-96) |
-| F200 | <code>PUT:/app/api/projects</code> | PUT:/app/api/projects -&gt; Response status 400 not defined for path '/api/projects'. | [<code>faults.java#test\_15</code>](#user-content-test-faults-java-test-15), [<code>faults.java#test\_28</code>](#user-content-test-faults-java-test-28), [<code>faults.java#test\_29</code>](#user-content-test-faults-java-test-29) (+3 more) |
-| F200 | <code>PUT:/app/api/projects/update</code> | PUT:/app/api/projects/update -&gt; Response status 400 not defined for path '/api/projects/update'. | [<code>faults.java#test\_74</code>](#user-content-test-faults-java-test-74), [<code>faults.java#test\_82</code>](#user-content-test-faults-java-test-82) |
+| <code>GET:/app/api/assignments</code> | 192 | \[Path '/collection/0/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_16</code>](#user-content-test-faults-java-test-16) |
+| <code>GET:/app/api/assignments/</code> | 192 | \[Path '/collection/0/commitEmpDesc'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_17</code>](#user-content-test-faults-java-test-17) |
+| <code>GET:/app/api/employees</code> | 33 | \[Path '/collection/0/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_12</code>](#user-content-test-faults-java-test-12) |
+| <code>GET:/app/api/employees/</code> | 33 | \[Path '/collection/0/manager/hiredate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_13</code>](#user-content-test-faults-java-test-13) |
+| <code>GET:/app/api/credentials</code> | 6 | \[Path '/collection/14/password'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_11</code>](#user-content-test-faults-java-test-11) |
+| <code>GET:/app/api/employees/data/manager-project-data/{employeeId}</code> | 4 | \[Path '/collection/0/title'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_5</code>](#user-content-test-faults-java-test-5), [<code>faults.java#test\_32</code>](#user-content-test-faults-java-test-32) |
+| <code>POST:/app/api/credentials</code> | 4 | \[Path '/password'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_7</code>](#user-content-test-faults-java-test-7), [<code>faults.java#test\_6</code>](#user-content-test-faults-java-test-6), [<code>faults.java#test\_11</code>](#user-content-test-faults-java-test-11) (+1 more) |
+| <code>POST:/app/api/credentials/save</code> | 4 | \[Path '/password'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_4</code>](#user-content-test-faults-java-test-4), [<code>faults.java#test\_87</code>](#user-content-test-faults-java-test-87) |
+| <code>POST:/app/api/departments</code> | 3 | \[Path '/location/adr'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_9</code>](#user-content-test-faults-java-test-9), [<code>faults.java#test\_3</code>](#user-content-test-faults-java-test-3), [<code>faults.java#test\_79</code>](#user-content-test-faults-java-test-79) (+1 more) |
+| <code>POST:/app/api/projects</code> | 3 | \[Path '/endDate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_15</code>](#user-content-test-faults-java-test-15), [<code>faults.java#test\_10</code>](#user-content-test-faults-java-test-10), [<code>faults.java#test\_19</code>](#user-content-test-faults-java-test-19) (+2 more) |
+| <code>GET:/app/api/credentials/</code> | 2 | \[Path '/collection/14/role'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_0</code>](#user-content-test-faults-java-test-0) |
+| <code>GET:/app/api/projects</code> | 2 | \[Path '/collection/9/endDate'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_1</code>](#user-content-test-faults-java-test-1), [<code>faults.java#test\_2</code>](#user-content-test-faults-java-test-2) |
+| <code>PUT:/app/api/credentials/update</code> | 2 | \[Path '/username'\] Instance type (null) does not match any allowed primitive type (allowed: \["string"\]) | [<code>faults.java#test\_8</code>](#user-content-test-faults-java-test-8), [<code>faults.java#test\_88</code>](#user-content-test-faults-java-test-88) |
+| <code>DELETE:/app/api/assignments/{employeeId}/{projectId}/{commitDate}</code> | 1 | Response status 400 not defined for path '/api/assignments/{employeeId}/{projectId}/{commitDate}'. | [<code>faults.java#test\_65</code>](#user-content-test-faults-java-test-65) |
+| <code>DELETE:/app/api/assignments/delete/{employeeId}/{projectId}/{commitDate}</code> | 1 | Response status 400 not defined for path '/api/assignments/delete/{employeeId}/{projectId}/{commitDate}'. | [<code>faults.java#test\_21</code>](#user-content-test-faults-java-test-21) |
+| <code>DELETE:/app/api/credentials/{id}</code> | 1 | Response status 400 not defined for path '/api/credentials/{id}'. | [<code>faults.java#test\_71</code>](#user-content-test-faults-java-test-71), [<code>faults.java#test\_91</code>](#user-content-test-faults-java-test-91) |
+| <code>DELETE:/app/api/credentials/delete/{id}</code> | 1 | Response status 400 not defined for path '/api/credentials/delete/{id}'. | [<code>faults.java#test\_33</code>](#user-content-test-faults-java-test-33) |
+| <code>DELETE:/app/api/credentials/username/{username}</code> | 1 | Response status 400 not defined for path '/api/credentials/username/{username}'. | [<code>faults.java#test\_38</code>](#user-content-test-faults-java-test-38) |
+| <code>DELETE:/app/api/departments/{id}</code> | 1 | Response status 400 not defined for path '/api/departments/{id}'. | [<code>faults.java#test\_67</code>](#user-content-test-faults-java-test-67) |
+| <code>DELETE:/app/api/departments/delete/{id}</code> | 1 | Response status 400 not defined for path '/api/departments/delete/{id}'. | [<code>faults.java#test\_23</code>](#user-content-test-faults-java-test-23) |
+| <code>DELETE:/app/api/employees/{id}</code> | 1 | Response status 400 not defined for path '/api/employees/{id}'. | [<code>faults.java#test\_24</code>](#user-content-test-faults-java-test-24) |
+| <code>DELETE:/app/api/employees/delete/{id}</code> | 1 | Response status 400 not defined for path '/api/employees/delete/{id}'. | [<code>faults.java#test\_72</code>](#user-content-test-faults-java-test-72) |
+| <code>DELETE:/app/api/employees/username/{username}</code> | 1 | Response status 400 not defined for path '/api/employees/username/{username}'. | [<code>faults.java#test\_59</code>](#user-content-test-faults-java-test-59), [<code>faults.java#test\_62</code>](#user-content-test-faults-java-test-62) |
+| <code>DELETE:/app/api/locations/{id}</code> | 1 | Response status 400 not defined for path '/api/locations/{id}'. | [<code>faults.java#test\_68</code>](#user-content-test-faults-java-test-68) |
+| <code>DELETE:/app/api/locations/delete/{id}</code> | 1 | Response status 400 not defined for path '/api/locations/delete/{id}'. | [<code>faults.java#test\_25</code>](#user-content-test-faults-java-test-25) |
+| <code>DELETE:/app/api/projects/{id}</code> | 1 | Response status 400 not defined for path '/api/projects/{id}'. | [<code>faults.java#test\_37</code>](#user-content-test-faults-java-test-37), [<code>faults.java#test\_56</code>](#user-content-test-faults-java-test-56) |
+| <code>DELETE:/app/api/projects/delete/{id}</code> | 1 | Response status 400 not defined for path '/api/projects/delete/{id}'. | [<code>faults.java#test\_26</code>](#user-content-test-faults-java-test-26) |
+| <code>GET:/app/api/assignments/{employeeId}/{projectId}</code> | 1 | Response status 400 not defined for path '/api/assignments/{employeeId}/{projectId}'. | [<code>faults.java#test\_18</code>](#user-content-test-faults-java-test-18) |
+| <code>GET:/app/api/assignments/{employeeId}/{projectId}/{commitDate}</code> | 1 | Response status 400 not defined for path '/api/assignments/{employeeId}/{projectId}/{commitDate}'. | [<code>faults.java#test\_31</code>](#user-content-test-faults-java-test-31) |
+| <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}</code> | 1 | Response status 400 not defined for path '/api/assignments/data/project-commit/{employeeId}/{projectId}'. | [<code>faults.java#test\_30</code>](#user-content-test-faults-java-test-30), [<code>faults.java#test\_64</code>](#user-content-test-faults-java-test-64), [<code>faults.java#test\_70</code>](#user-content-test-faults-java-test-70) |
+| <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}/{commitDate}</code> | 1 | Response status 400 not defined for path '/api/assignments/data/project-commit/{employeeId}/{projectId}/{commitDate}'. | [<code>faults.java#test\_63</code>](#user-content-test-faults-java-test-63), [<code>faults.java#test\_69</code>](#user-content-test-faults-java-test-69) |
+| <code>GET:/app/api/assignments/data/project-commit/{projectId}</code> | 1 | Response status 400 not defined for path '/api/assignments/data/project-commit/{projectId}'. | [<code>faults.java#test\_55</code>](#user-content-test-faults-java-test-55) |
+| <code>GET:/app/api/credentials/{id}</code> | 1 | Response status 400 not defined for path '/api/credentials/{id}'. | [<code>faults.java#test\_34</code>](#user-content-test-faults-java-test-34) |
+| <code>GET:/app/api/credentials/username/{username}</code> | 1 | Response status 400 not defined for path '/api/credentials/username/{username}'. | [<code>faults.java#test\_40</code>](#user-content-test-faults-java-test-40), [<code>faults.java#test\_42</code>](#user-content-test-faults-java-test-42) |
+| <code>GET:/app/api/departments/{id}</code> | 1 | Response status 400 not defined for path '/api/departments/{id}'. | [<code>faults.java#test\_27</code>](#user-content-test-faults-java-test-27) |
+| <code>GET:/app/api/employees/{id}</code> | 1 | Response status 400 not defined for path '/api/employees/{id}'. | [<code>faults.java#test\_35</code>](#user-content-test-faults-java-test-35) |
+| <code>GET:/app/api/employees/data/department/{departmentId}</code> | 1 | Response status 400 not defined for path '/api/employees/data/department/{departmentId}'. | [<code>faults.java#test\_22</code>](#user-content-test-faults-java-test-22) |
+| <code>GET:/app/api/employees/data/employee-project-data/{employeeId}</code> | 1 | Response status 400 not defined for path '/api/employees/data/employee-project-data/{employeeId}'. | [<code>faults.java#test\_66</code>](#user-content-test-faults-java-test-66) |
+| <code>GET:/app/api/employees/username/{username}</code> | 1 | Response status 400 not defined for path '/api/employees/username/{username}'. | [<code>faults.java#test\_39</code>](#user-content-test-faults-java-test-39) |
+| <code>GET:/app/api/locations/{id}</code> | 1 | Response status 400 not defined for path '/api/locations/{id}'. | [<code>faults.java#test\_57</code>](#user-content-test-faults-java-test-57) |
+| <code>GET:/app/api/projects/{id}</code> | 1 | Response status 400 not defined for path '/api/projects/{id}'. | [<code>faults.java#test\_36</code>](#user-content-test-faults-java-test-36) |
+| <code>POST:/app/api/assignments</code> | 1 | Response status 400 not defined for path '/api/assignments'. | [<code>faults.java#test\_54</code>](#user-content-test-faults-java-test-54), [<code>faults.java#test\_76</code>](#user-content-test-faults-java-test-76), [<code>faults.java#test\_80</code>](#user-content-test-faults-java-test-80) (+5 more) |
+| <code>POST:/app/api/assignments/save</code> | 1 | Response status 400 not defined for path '/api/assignments/save'. | [<code>faults.java#test\_78</code>](#user-content-test-faults-java-test-78), [<code>faults.java#test\_98</code>](#user-content-test-faults-java-test-98) |
+| <code>POST:/app/api/authenticate</code> | 1 | Response status 400 not defined for path '/api/authenticate'. | [<code>faults.java#test\_47</code>](#user-content-test-faults-java-test-47) |
+| <code>POST:/app/api/authenticate/</code> | 1 | Response status 400 not defined for path '/api/authenticate/'. | [<code>faults.java#test\_94</code>](#user-content-test-faults-java-test-94), [<code>faults.java#test\_97</code>](#user-content-test-faults-java-test-97) |
+| <code>POST:/app/api/departments/save</code> | 1 | Response status 400 not defined for path '/api/departments/save'. | [<code>faults.java#test\_84</code>](#user-content-test-faults-java-test-84), [<code>faults.java#test\_103</code>](#user-content-test-faults-java-test-103) |
+| <code>POST:/app/api/employees</code> | 1 | Response status 400 not defined for path '/api/employees'. | [<code>faults.java#test\_92</code>](#user-content-test-faults-java-test-92) |
+| <code>POST:/app/api/employees/save</code> | 1 | Response status 400 not defined for path '/api/employees/save'. | [<code>faults.java#test\_52</code>](#user-content-test-faults-java-test-52), [<code>faults.java#test\_73</code>](#user-content-test-faults-java-test-73) |
+| <code>POST:/app/api/locations</code> | 1 | Response status 400 not defined for path '/api/locations'. | [<code>faults.java#test\_75</code>](#user-content-test-faults-java-test-75), [<code>faults.java#test\_93</code>](#user-content-test-faults-java-test-93) |
+| <code>POST:/app/api/locations/save</code> | 1 | Response status 400 not defined for path '/api/locations/save'. | [<code>faults.java#test\_43</code>](#user-content-test-faults-java-test-43) |
+| <code>POST:/app/api/projects/save</code> | 1 | Response status 400 not defined for path '/api/projects/save'. | [<code>faults.java#test\_20</code>](#user-content-test-faults-java-test-20), [<code>faults.java#test\_60</code>](#user-content-test-faults-java-test-60) |
+| <code>PUT:/app/api/assignments</code> | 1 | Response status 400 not defined for path '/api/assignments'. | [<code>faults.java#test\_41</code>](#user-content-test-faults-java-test-41), [<code>faults.java#test\_108</code>](#user-content-test-faults-java-test-108) |
+| <code>PUT:/app/api/assignments/update</code> | 1 | Response status 400 not defined for path '/api/assignments/update'. | [<code>faults.java#test\_53</code>](#user-content-test-faults-java-test-53), [<code>faults.java#test\_77</code>](#user-content-test-faults-java-test-77), [<code>faults.java#test\_100</code>](#user-content-test-faults-java-test-100) |
+| <code>PUT:/app/api/credentials</code> | 1 | Response status 400 not defined for path '/api/credentials'. | [<code>faults.java#test\_81</code>](#user-content-test-faults-java-test-81) |
+| <code>PUT:/app/api/departments</code> | 1 | Response status 400 not defined for path '/api/departments'. | [<code>faults.java#test\_45</code>](#user-content-test-faults-java-test-45), [<code>faults.java#test\_46</code>](#user-content-test-faults-java-test-46), [<code>faults.java#test\_48</code>](#user-content-test-faults-java-test-48) (+1 more) |
+| <code>PUT:/app/api/departments/update</code> | 1 | Response status 400 not defined for path '/api/departments/update'. | [<code>faults.java#test\_85</code>](#user-content-test-faults-java-test-85), [<code>faults.java#test\_86</code>](#user-content-test-faults-java-test-86), [<code>faults.java#test\_90</code>](#user-content-test-faults-java-test-90) |
+| <code>PUT:/app/api/employees</code> | 1 | Response status 400 not defined for path '/api/employees'. | [<code>faults.java#test\_49</code>](#user-content-test-faults-java-test-49) |
+| <code>PUT:/app/api/employees/update</code> | 1 | Response status 400 not defined for path '/api/employees/update'. | [<code>faults.java#test\_50</code>](#user-content-test-faults-java-test-50) |
+| <code>PUT:/app/api/locations</code> | 1 | Response status 400 not defined for path '/api/locations'. | [<code>faults.java#test\_14</code>](#user-content-test-faults-java-test-14), [<code>faults.java#test\_102</code>](#user-content-test-faults-java-test-102) |
+| <code>PUT:/app/api/locations/update</code> | 1 | Response status 400 not defined for path '/api/locations/update'. | [<code>faults.java#test\_44</code>](#user-content-test-faults-java-test-44), [<code>faults.java#test\_96</code>](#user-content-test-faults-java-test-96) |
+| <code>PUT:/app/api/projects</code> | 1 | Response status 400 not defined for path '/api/projects'. | [<code>faults.java#test\_15</code>](#user-content-test-faults-java-test-15), [<code>faults.java#test\_28</code>](#user-content-test-faults-java-test-28), [<code>faults.java#test\_29</code>](#user-content-test-faults-java-test-29) (+3 more) |
+| <code>PUT:/app/api/projects/update</code> | 1 | Response status 400 not defined for path '/api/projects/update'. | [<code>faults.java#test\_74</code>](#user-content-test-faults-java-test-74), [<code>faults.java#test\_82</code>](#user-content-test-faults-java-test-82) |
 
 </details>
+
+<a name="wfc-endpoints"></a>
 
 <details>
 <summary>Endpoints (67)</summary>
 
-| Endpoint | Status codes | Fault codes | Test cases |
+| Endpoint | Responses | Faults | Test cases |
 | --- | --- | --- | --- |
-| <code>GET:/app/api/assignments</code> | 200 | F200 | 1 |
-| <code>POST:/app/api/assignments</code> | 400 | F200 | 8 |
-| <code>PUT:/app/api/assignments</code> | 400 | F200 | 2 |
-| <code>GET:/app/api/assignments/</code> | 200 | F200 | 1 |
-| <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}</code> | 400 | F200 | 3 |
-| <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}/{commitDate}</code> | 400 | F200 | 2 |
-| <code>GET:/app/api/assignments/data/project-commit/{projectId}</code> | 400 | F200 | 1 |
-| <code>DELETE:/app/api/assignments/delete/{employeeId}/{projectId}/{commitDate}</code> | 400 | F200 | 1 |
-| <code>POST:/app/api/assignments/save</code> | 400 | F200 | 2 |
-| <code>PUT:/app/api/assignments/update</code> | 400 | F200 | 3 |
-| <code>GET:/app/api/assignments/{employeeId}/{projectId}</code> | 400 | F200 | 1 |
-| <code>GET:/app/api/assignments/{employeeId}/{projectId}/{commitDate}</code> | 400 | F200 | 1 |
-| <code>DELETE:/app/api/assignments/{employeeId}/{projectId}/{commitDate}</code> | 400 | F200 | 1 |
-| <code>POST:/app/api/authenticate</code> | 400 | F200 | 1 |
-| <code>POST:/app/api/authenticate/</code> | 400 | F200 | 2 |
-| <code>GET:/app/api/credentials</code> | 200 | F200 | 2 |
-| <code>POST:/app/api/credentials</code> | 200, 400 | F200 | 4 |
-| <code>PUT:/app/api/credentials</code> | 200, 400 | F200 | 2 |
-| <code>GET:/app/api/credentials/</code> | 200 | F200 | 2 |
-| <code>DELETE:/app/api/credentials/delete/{id}</code> | 400 | F200 | 1 |
-| <code>POST:/app/api/credentials/save</code> | 200, 400 | F200 | 2 |
-| <code>PUT:/app/api/credentials/update</code> | 200, 400 | F200 | 2 |
-| <code>GET:/app/api/credentials/username/{username}</code> | 400 | F200 | 2 |
-| <code>DELETE:/app/api/credentials/username/{username}</code> | 200, 400 | F200 | 2 |
-| <code>GET:/app/api/credentials/{id}</code> | 400 | F200 | 1 |
-| <code>DELETE:/app/api/credentials/{id}</code> | 400 | F200 | 2 |
-| <code>GET:/app/api/departments</code> | 200 | - | 1 |
-| <code>POST:/app/api/departments</code> | 200, 400 | F200 | 4 |
-| <code>PUT:/app/api/departments</code> | 400 | F200 | 4 |
-| <code>GET:/app/api/departments/</code> | 200 | - | 1 |
-| <code>DELETE:/app/api/departments/delete/{id}</code> | 400 | F200 | 1 |
-| <code>POST:/app/api/departments/save</code> | 400 | F200 | 2 |
-| <code>PUT:/app/api/departments/update</code> | 200, 400 | F200 | 4 |
-| <code>GET:/app/api/departments/{id}</code> | 400 | F200 | 1 |
-| <code>DELETE:/app/api/departments/{id}</code> | 400 | F200 | 1 |
-| <code>GET:/app/api/employees</code> | 200 | F200 | 1 |
-| <code>POST:/app/api/employees</code> | 400 | F200 | 1 |
-| <code>PUT:/app/api/employees</code> | 400 | F200 | 1 |
-| <code>GET:/app/api/employees/</code> | 200 | F200 | 1 |
-| <code>GET:/app/api/employees/data/department/{departmentId}</code> | 400 | F200 | 1 |
-| <code>GET:/app/api/employees/data/employee-project-data/{employeeId}</code> | 400 | F200 | 1 |
-| <code>GET:/app/api/employees/data/manager-project-data/{employeeId}</code> | 200, 400 | F200 | 2 |
-| <code>DELETE:/app/api/employees/delete/{id}</code> | 200, 400 | F200 | 2 |
-| <code>POST:/app/api/employees/save</code> | 400 | F200 | 2 |
-| <code>PUT:/app/api/employees/update</code> | 400 | F200 | 1 |
-| <code>GET:/app/api/employees/username/{username}</code> | 400 | F200 | 1 |
-| <code>DELETE:/app/api/employees/username/{username}</code> | 200, 400 | F200 | 3 |
-| <code>GET:/app/api/employees/{id}</code> | 400 | F200 | 1 |
-| <code>DELETE:/app/api/employees/{id}</code> | 400 | F200 | 1 |
-| <code>GET:/app/api/locations</code> | 200 | - | 2 |
-| <code>POST:/app/api/locations</code> | 200, 400 | F200 | 3 |
-| <code>PUT:/app/api/locations</code> | 200, 400 | F200 | 3 |
-| <code>GET:/app/api/locations/</code> | 200 | - | 1 |
-| <code>DELETE:/app/api/locations/delete/{id}</code> | 400 | F200 | 1 |
-| <code>POST:/app/api/locations/save</code> | 200, 400 | F200 | 2 |
-| <code>PUT:/app/api/locations/update</code> | 400 | F200 | 2 |
-| <code>GET:/app/api/locations/{id}</code> | 400 | F200 | 1 |
-| <code>DELETE:/app/api/locations/{id}</code> | 400 | F200 | 1 |
-| <code>GET:/app/api/projects</code> | 200 | F200 | 2 |
-| <code>POST:/app/api/projects</code> | 200, 400 | F200 | 5 |
-| <code>PUT:/app/api/projects</code> | 400 | F200 | 6 |
-| <code>GET:/app/api/projects/</code> | 200 | - | 1 |
-| <code>DELETE:/app/api/projects/delete/{id}</code> | 400 | F200 | 1 |
-| <code>POST:/app/api/projects/save</code> | 400 | F200 | 2 |
-| <code>PUT:/app/api/projects/update</code> | 400 | F200 | 2 |
-| <code>GET:/app/api/projects/{id}</code> | 200, 400 | F200 | 2 |
-| <code>DELETE:/app/api/projects/{id}</code> | 400 | F200 | 2 |
+| <code>GET:/app/api/assignments</code> | &#x1F7E2; 200 | &#x1F534; F200 &times;192 | 1 |
+| <code>GET:/app/api/assignments/</code> | &#x1F7E2; 200 | &#x1F534; F200 &times;192 | 1 |
+| <code>GET:/app/api/employees</code> | &#x1F7E2; 200 | &#x1F534; F200 &times;33 | 1 |
+| <code>GET:/app/api/employees/</code> | &#x1F7E2; 200 | &#x1F534; F200 &times;33 | 1 |
+| <code>GET:/app/api/credentials</code> | &#x1F7E2; 200 | &#x1F534; F200 &times;6 | 2 |
+| <code>POST:/app/api/credentials</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;4 | 4 |
+| <code>POST:/app/api/credentials/save</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;4 | 2 |
+| <code>GET:/app/api/employees/data/manager-project-data/{employeeId}</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;4 | 2 |
+| <code>POST:/app/api/departments</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;3 | 4 |
+| <code>POST:/app/api/projects</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;3 | 5 |
+| <code>GET:/app/api/credentials/</code> | &#x1F7E2; 200 | &#x1F534; F200 &times;2 | 2 |
+| <code>PUT:/app/api/credentials/update</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;2 | 2 |
+| <code>GET:/app/api/projects</code> | &#x1F7E2; 200 | &#x1F534; F200 &times;2 | 2 |
+| <code>POST:/app/api/assignments</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 8 |
+| <code>PUT:/app/api/assignments</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 3 |
+| <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}/{commitDate}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>GET:/app/api/assignments/data/project-commit/{projectId}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>DELETE:/app/api/assignments/delete/{employeeId}/{projectId}/{commitDate}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>POST:/app/api/assignments/save</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>PUT:/app/api/assignments/update</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 3 |
+| <code>GET:/app/api/assignments/{employeeId}/{projectId}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>GET:/app/api/assignments/{employeeId}/{projectId}/{commitDate}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>DELETE:/app/api/assignments/{employeeId}/{projectId}/{commitDate}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>POST:/app/api/authenticate</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>POST:/app/api/authenticate/</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>PUT:/app/api/credentials</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>DELETE:/app/api/credentials/delete/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>GET:/app/api/credentials/username/{username}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>DELETE:/app/api/credentials/username/{username}</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>GET:/app/api/credentials/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>DELETE:/app/api/credentials/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>PUT:/app/api/departments</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 4 |
+| <code>DELETE:/app/api/departments/delete/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>POST:/app/api/departments/save</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>PUT:/app/api/departments/update</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 4 |
+| <code>GET:/app/api/departments/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>DELETE:/app/api/departments/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>POST:/app/api/employees</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>PUT:/app/api/employees</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>GET:/app/api/employees/data/department/{departmentId}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>GET:/app/api/employees/data/employee-project-data/{employeeId}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>DELETE:/app/api/employees/delete/{id}</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>POST:/app/api/employees/save</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>PUT:/app/api/employees/update</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>GET:/app/api/employees/username/{username}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>DELETE:/app/api/employees/username/{username}</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 3 |
+| <code>GET:/app/api/employees/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>DELETE:/app/api/employees/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>POST:/app/api/locations</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 3 |
+| <code>PUT:/app/api/locations</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 3 |
+| <code>DELETE:/app/api/locations/delete/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>POST:/app/api/locations/save</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>PUT:/app/api/locations/update</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>GET:/app/api/locations/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>DELETE:/app/api/locations/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>PUT:/app/api/projects</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 6 |
+| <code>DELETE:/app/api/projects/delete/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 1 |
+| <code>POST:/app/api/projects/save</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>PUT:/app/api/projects/update</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>GET:/app/api/projects/{id}</code> | &#x1F7E2; 200, &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>DELETE:/app/api/projects/{id}</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;1 | 2 |
+| <code>GET:/app/api/departments</code> | &#x1F7E2; 200 | &#x2705; none | 1 |
+| <code>GET:/app/api/departments/</code> | &#x1F7E2; 200 | &#x2705; none | 1 |
+| <code>GET:/app/api/locations</code> | &#x1F7E2; 200 | &#x2705; none | 2 |
+| <code>GET:/app/api/locations/</code> | &#x1F7E2; 200 | &#x2705; none | 1 |
+| <code>GET:/app/api/projects/</code> | &#x1F7E2; 200 | &#x2705; none | 1 |
 
 </details>
+
+<a name="wfc-tests"></a>
 
 ### Generated tests (127)
 
 Click a test case id in the tables above to jump to its code.
 
+#### faults.java (110)
+
 <a name="test-faults-java-test-0"></a>
-<details>
-<summary>faults.java#test_0</summary>
+<details open>
+<summary><b>test_0</b> &middot; F200 &middot; <code>GET:/app/api/credentials/</code></summary>
 
 ```java
     /**
@@ -705,11 +257,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-1"></a>
-<details>
-<summary>faults.java#test_1</summary>
+<details open>
+<summary><b>test_1</b> &middot; F200 &middot; <code>GET:/app/api/projects</code></summary>
 
 ```java
     /**
@@ -799,11 +353,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-2"></a>
-<details>
-<summary>faults.java#test_2</summary>
+<details open>
+<summary><b>test_2</b> &middot; F200 &middot; <code>GET:/app/api/projects</code></summary>
 
 ```java
     /**
@@ -895,11 +451,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-3"></a>
-<details>
-<summary>faults.java#test_3</summary>
+<details open>
+<summary><b>test_3</b> &middot; F200 &middot; <code>POST:/app/api/departments</code></summary>
 
 ```java
     /**
@@ -936,11 +494,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-4"></a>
-<details>
-<summary>faults.java#test_4</summary>
+<details open>
+<summary><b>test_4</b> &middot; F200 &middot; <code>POST:/app/api/credentials/save</code></summary>
 
 ```java
     /**
@@ -981,11 +541,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-5"></a>
-<details>
-<summary>faults.java#test_5</summary>
+<details open>
+<summary><b>test_5</b> &middot; F200 &middot; <code>GET:/app/api/employees/data/manager-project-data/{employeeId}</code></summary>
 
 ```java
     /**
@@ -1033,11 +595,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-6"></a>
-<details>
-<summary>faults.java#test_6</summary>
+<details open>
+<summary><b>test_6</b> &middot; F200 &middot; <code>POST:/app/api/credentials</code></summary>
 
 ```java
     /**
@@ -1079,11 +643,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-7"></a>
-<details>
-<summary>faults.java#test_7</summary>
+<details open>
+<summary><b>test_7</b> &middot; F200 &middot; <code>POST:/app/api/credentials</code></summary>
 
 ```java
     /**
@@ -1125,11 +691,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-8"></a>
-<details>
-<summary>faults.java#test_8</summary>
+<details open>
+<summary><b>test_8</b> &middot; F200 &middot; <code>PUT:/app/api/credentials/update</code></summary>
 
 ```java
     /**
@@ -1170,11 +738,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-9"></a>
-<details>
-<summary>faults.java#test_9</summary>
+<details open>
+<summary><b>test_9</b> &middot; F200 &middot; <code>POST:/app/api/departments</code></summary>
 
 ```java
     /**
@@ -1219,11 +789,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-10"></a>
-<details>
-<summary>faults.java#test_10</summary>
+<details open>
+<summary><b>test_10</b> &middot; F200 &middot; <code>POST:/app/api/projects</code></summary>
 
 ```java
     /**
@@ -1265,11 +837,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-11"></a>
-<details>
-<summary>faults.java#test_11</summary>
+<details open>
+<summary><b>test_11</b> &middot; F200 &middot; <code>GET:/app/api/credentials</code> (+1 more)</summary>
 
 ```java
     /**
@@ -1331,11 +905,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-12"></a>
-<details>
-<summary>faults.java#test_12</summary>
+<details open>
+<summary><b>test_12</b> &middot; F200 &middot; <code>GET:/app/api/employees</code></summary>
 
 ```java
     /**
@@ -1508,11 +1084,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-13"></a>
-<details>
-<summary>faults.java#test_13</summary>
+<details open>
+<summary><b>test_13</b> &middot; F200 &middot; <code>GET:/app/api/employees/</code></summary>
 
 ```java
     /**
@@ -1685,11 +1263,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-14"></a>
-<details>
-<summary>faults.java#test_14</summary>
+<details open>
+<summary><b>test_14</b> &middot; F200 &middot; <code>PUT:/app/api/locations</code></summary>
 
 ```java
     /**
@@ -1746,11 +1326,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-15"></a>
-<details>
-<summary>faults.java#test_15</summary>
+<details open>
+<summary><b>test_15</b> &middot; F200 &middot; <code>POST:/app/api/projects</code> (+1 more)</summary>
 
 ```java
     /**
@@ -1812,11 +1394,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-16"></a>
-<details>
-<summary>faults.java#test_16</summary>
+<details open>
+<summary><b>test_16</b> &middot; F200 &middot; <code>GET:/app/api/assignments</code></summary>
 
 ```java
     /**
@@ -2178,11 +1762,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-17"></a>
-<details>
-<summary>faults.java#test_17</summary>
+<details open>
+<summary><b>test_17</b> &middot; F200 &middot; <code>GET:/app/api/assignments/</code></summary>
 
 ```java
     /**
@@ -2544,11 +2130,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-18"></a>
-<details>
-<summary>faults.java#test_18</summary>
+<details open>
+<summary><b>test_18</b> &middot; F200 &middot; <code>GET:/app/api/assignments/{employeeId}/{projectId}</code></summary>
 
 ```java
     /**
@@ -2572,11 +2160,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-19"></a>
-<details>
-<summary>faults.java#test_19</summary>
+<details open>
+<summary><b>test_19</b> &middot; F200 &middot; <code>POST:/app/api/projects</code></summary>
 
 ```java
     /**
@@ -2629,11 +2219,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-20"></a>
-<details>
-<summary>faults.java#test_20</summary>
+<details open>
+<summary><b>test_20</b> &middot; F200 &middot; <code>POST:/app/api/projects/save</code></summary>
 
 ```java
     /**
@@ -2666,11 +2258,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-21"></a>
-<details>
-<summary>faults.java#test_21</summary>
+<details open>
+<summary><b>test_21</b> &middot; F200 &middot; <code>DELETE:/app/api/assignments/delete/{employeeId}/{projectId}/{commitDate}</code></summary>
 
 ```java
     /**
@@ -2694,11 +2288,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-22"></a>
-<details>
-<summary>faults.java#test_22</summary>
+<details open>
+<summary><b>test_22</b> &middot; F200 &middot; <code>GET:/app/api/employees/data/department/{departmentId}</code></summary>
 
 ```java
     /**
@@ -2722,11 +2318,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-23"></a>
-<details>
-<summary>faults.java#test_23</summary>
+<details open>
+<summary><b>test_23</b> &middot; F200 &middot; <code>DELETE:/app/api/departments/delete/{id}</code></summary>
 
 ```java
     /**
@@ -2750,11 +2348,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-24"></a>
-<details>
-<summary>faults.java#test_24</summary>
+<details open>
+<summary><b>test_24</b> &middot; F200 &middot; <code>DELETE:/app/api/employees/{id}</code></summary>
 
 ```java
     /**
@@ -2778,11 +2378,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-25"></a>
-<details>
-<summary>faults.java#test_25</summary>
+<details open>
+<summary><b>test_25</b> &middot; F200 &middot; <code>DELETE:/app/api/locations/delete/{id}</code></summary>
 
 ```java
     /**
@@ -2806,11 +2408,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-26"></a>
-<details>
-<summary>faults.java#test_26</summary>
+<details open>
+<summary><b>test_26</b> &middot; F200 &middot; <code>DELETE:/app/api/projects/delete/{id}</code></summary>
 
 ```java
     /**
@@ -2834,11 +2438,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-27"></a>
-<details>
-<summary>faults.java#test_27</summary>
+<details open>
+<summary><b>test_27</b> &middot; F200 &middot; <code>GET:/app/api/departments/{id}</code></summary>
 
 ```java
     /**
@@ -2862,11 +2468,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-28"></a>
-<details>
-<summary>faults.java#test_28</summary>
+<details open>
+<summary><b>test_28</b> &middot; F200 &middot; <code>PUT:/app/api/projects</code></summary>
 
 ```java
     /**
@@ -2947,11 +2555,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-29"></a>
-<details>
-<summary>faults.java#test_29</summary>
+<details open>
+<summary><b>test_29</b> &middot; F200 &middot; <code>PUT:/app/api/projects</code></summary>
 
 ```java
     /**
@@ -3034,11 +2644,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-30"></a>
-<details>
-<summary>faults.java#test_30</summary>
+<details open>
+<summary><b>test_30</b> &middot; F200 &middot; <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}</code></summary>
 
 ```java
     /**
@@ -3062,11 +2674,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-31"></a>
-<details>
-<summary>faults.java#test_31</summary>
+<details open>
+<summary><b>test_31</b> &middot; F200 &middot; <code>GET:/app/api/assignments/{employeeId}/{projectId}/{commitDate}</code></summary>
 
 ```java
     /**
@@ -3090,11 +2704,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-32"></a>
-<details>
-<summary>faults.java#test_32</summary>
+<details open>
+<summary><b>test_32</b> &middot; F200 &middot; <code>GET:/app/api/employees/data/manager-project-data/{employeeId}</code></summary>
 
 ```java
     /**
@@ -3118,11 +2734,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-33"></a>
-<details>
-<summary>faults.java#test_33</summary>
+<details open>
+<summary><b>test_33</b> &middot; F200 &middot; <code>DELETE:/app/api/credentials/delete/{id}</code></summary>
 
 ```java
     /**
@@ -3146,11 +2764,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-34"></a>
-<details>
-<summary>faults.java#test_34</summary>
+<details open>
+<summary><b>test_34</b> &middot; F200 &middot; <code>GET:/app/api/credentials/{id}</code></summary>
 
 ```java
     /**
@@ -3174,11 +2794,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-35"></a>
-<details>
-<summary>faults.java#test_35</summary>
+<details open>
+<summary><b>test_35</b> &middot; F200 &middot; <code>GET:/app/api/employees/{id}</code></summary>
 
 ```java
     /**
@@ -3202,11 +2824,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-36"></a>
-<details>
-<summary>faults.java#test_36</summary>
+<details open>
+<summary><b>test_36</b> &middot; F200 &middot; <code>GET:/app/api/projects/{id}</code></summary>
 
 ```java
     /**
@@ -3230,11 +2854,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-37"></a>
-<details>
-<summary>faults.java#test_37</summary>
+<details open>
+<summary><b>test_37</b> &middot; F200 &middot; <code>DELETE:/app/api/projects/{id}</code></summary>
 
 ```java
     /**
@@ -3258,11 +2884,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-38"></a>
-<details>
-<summary>faults.java#test_38</summary>
+<details open>
+<summary><b>test_38</b> &middot; F200 &middot; <code>DELETE:/app/api/credentials/username/{username}</code></summary>
 
 ```java
     /**
@@ -3286,11 +2914,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-39"></a>
-<details>
-<summary>faults.java#test_39</summary>
+<details open>
+<summary><b>test_39</b> &middot; F200 &middot; <code>GET:/app/api/employees/username/{username}</code></summary>
 
 ```java
     /**
@@ -3314,11 +2944,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-40"></a>
-<details>
-<summary>faults.java#test_40</summary>
+<details open>
+<summary><b>test_40</b> &middot; F200 &middot; <code>GET:/app/api/credentials/username/{username}</code></summary>
 
 ```java
     /**
@@ -3392,11 +3024,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-41"></a>
-<details>
-<summary>faults.java#test_41</summary>
+<details open>
+<summary><b>test_41</b> &middot; F200 &middot; <code>PUT:/app/api/assignments</code></summary>
 
 ```java
     /**
@@ -3441,11 +3075,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-42"></a>
-<details>
-<summary>faults.java#test_42</summary>
+<details open>
+<summary><b>test_42</b> &middot; F200 &middot; <code>GET:/app/api/credentials/username/{username}</code></summary>
 
 ```java
     /**
@@ -3547,11 +3183,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-43"></a>
-<details>
-<summary>faults.java#test_43</summary>
+<details open>
+<summary><b>test_43</b> &middot; F200 &middot; <code>POST:/app/api/locations/save</code></summary>
 
 ```java
     /**
@@ -3579,11 +3217,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-44"></a>
-<details>
-<summary>faults.java#test_44</summary>
+<details open>
+<summary><b>test_44</b> &middot; F200 &middot; <code>PUT:/app/api/locations/update</code></summary>
 
 ```java
     /**
@@ -3612,11 +3252,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-45"></a>
-<details>
-<summary>faults.java#test_45</summary>
+<details open>
+<summary><b>test_45</b> &middot; F200 &middot; <code>PUT:/app/api/departments</code></summary>
 
 ```java
     /**
@@ -3695,11 +3337,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-46"></a>
-<details>
-<summary>faults.java#test_46</summary>
+<details open>
+<summary><b>test_46</b> &middot; F200 &middot; <code>PUT:/app/api/departments</code></summary>
 
 ```java
     /**
@@ -3780,11 +3424,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-47"></a>
-<details>
-<summary>faults.java#test_47</summary>
+<details open>
+<summary><b>test_47</b> &middot; F200 &middot; <code>POST:/app/api/authenticate</code></summary>
 
 ```java
     /**
@@ -3812,11 +3458,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-48"></a>
-<details>
-<summary>faults.java#test_48</summary>
+<details open>
+<summary><b>test_48</b> &middot; F200 &middot; <code>PUT:/app/api/departments</code></summary>
 
 ```java
     /**
@@ -3849,11 +3497,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-49"></a>
-<details>
-<summary>faults.java#test_49</summary>
+<details open>
+<summary><b>test_49</b> &middot; F200 &middot; <code>PUT:/app/api/employees</code></summary>
 
 ```java
     /**
@@ -3888,11 +3538,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-50"></a>
-<details>
-<summary>faults.java#test_50</summary>
+<details open>
+<summary><b>test_50</b> &middot; F200 &middot; <code>PUT:/app/api/employees/update</code></summary>
 
 ```java
     /**
@@ -3935,11 +3587,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-51"></a>
-<details>
-<summary>faults.java#test_51</summary>
+<details open>
+<summary><b>test_51</b> &middot; F200 &middot; <code>POST:/app/api/credentials</code></summary>
 
 ```java
     /**
@@ -3969,11 +3623,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-52"></a>
-<details>
-<summary>faults.java#test_52</summary>
+<details open>
+<summary><b>test_52</b> &middot; F200 &middot; <code>POST:/app/api/employees/save</code></summary>
 
 ```java
     /**
@@ -4059,11 +3715,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-53"></a>
-<details>
-<summary>faults.java#test_53</summary>
+<details open>
+<summary><b>test_53</b> &middot; F200 &middot; <code>PUT:/app/api/assignments/update</code></summary>
 
 ```java
     /**
@@ -4092,11 +3750,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-54"></a>
-<details>
-<summary>faults.java#test_54</summary>
+<details open>
+<summary><b>test_54</b> &middot; F200 &middot; <code>POST:/app/api/assignments</code></summary>
 
 ```java
     /**
@@ -4126,11 +3786,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-55"></a>
-<details>
-<summary>faults.java#test_55</summary>
+<details open>
+<summary><b>test_55</b> &middot; F200 &middot; <code>GET:/app/api/assignments/data/project-commit/{projectId}</code></summary>
 
 ```java
     /**
@@ -4162,11 +3824,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-56"></a>
-<details>
-<summary>faults.java#test_56</summary>
+<details open>
+<summary><b>test_56</b> &middot; F200 &middot; <code>DELETE:/app/api/projects/{id}</code></summary>
 
 ```java
     /**
@@ -4198,11 +3862,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-57"></a>
-<details>
-<summary>faults.java#test_57</summary>
+<details open>
+<summary><b>test_57</b> &middot; F200 &middot; <code>GET:/app/api/locations/{id}</code></summary>
 
 ```java
     /**
@@ -4234,11 +3900,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-58"></a>
-<details>
-<summary>faults.java#test_58</summary>
+<details open>
+<summary><b>test_58</b> &middot; F200 &middot; <code>PUT:/app/api/projects</code></summary>
 
 ```java
     /**
@@ -4278,11 +3946,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-59"></a>
-<details>
-<summary>faults.java#test_59</summary>
+<details open>
+<summary><b>test_59</b> &middot; F200 &middot; <code>DELETE:/app/api/employees/username/{username}</code></summary>
 
 ```java
     /**
@@ -4314,11 +3984,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-60"></a>
-<details>
-<summary>faults.java#test_60</summary>
+<details open>
+<summary><b>test_60</b> &middot; F200 &middot; <code>POST:/app/api/projects/save</code></summary>
 
 ```java
     /**
@@ -4359,11 +4031,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-61"></a>
-<details>
-<summary>faults.java#test_61</summary>
+<details open>
+<summary><b>test_61</b> &middot; F200 &middot; <code>POST:/app/api/projects</code></summary>
 
 ```java
     /**
@@ -4403,11 +4077,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-62"></a>
-<details>
-<summary>faults.java#test_62</summary>
+<details open>
+<summary><b>test_62</b> &middot; F200 &middot; <code>DELETE:/app/api/employees/username/{username}</code></summary>
 
 ```java
     /**
@@ -4488,11 +4164,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-63"></a>
-<details>
-<summary>faults.java#test_63</summary>
+<details open>
+<summary><b>test_63</b> &middot; F200 &middot; <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}/{commitDate}</code></summary>
 
 ```java
     /**
@@ -4524,11 +4202,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-64"></a>
-<details>
-<summary>faults.java#test_64</summary>
+<details open>
+<summary><b>test_64</b> &middot; F200 &middot; <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}</code></summary>
 
 ```java
     /**
@@ -4562,11 +4242,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-65"></a>
-<details>
-<summary>faults.java#test_65</summary>
+<details open>
+<summary><b>test_65</b> &middot; F200 &middot; <code>DELETE:/app/api/assignments/{employeeId}/{projectId}/{commitDate}</code></summary>
 
 ```java
     /**
@@ -4598,11 +4280,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-66"></a>
-<details>
-<summary>faults.java#test_66</summary>
+<details open>
+<summary><b>test_66</b> &middot; F200 &middot; <code>GET:/app/api/employees/data/employee-project-data/{employeeId}</code></summary>
 
 ```java
     /**
@@ -4636,11 +4320,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-67"></a>
-<details>
-<summary>faults.java#test_67</summary>
+<details open>
+<summary><b>test_67</b> &middot; F200 &middot; <code>DELETE:/app/api/departments/{id}</code></summary>
 
 ```java
     /**
@@ -4672,11 +4358,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-68"></a>
-<details>
-<summary>faults.java#test_68</summary>
+<details open>
+<summary><b>test_68</b> &middot; F200 &middot; <code>DELETE:/app/api/locations/{id}</code></summary>
 
 ```java
     /**
@@ -4708,11 +4396,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-69"></a>
-<details>
-<summary>faults.java#test_69</summary>
+<details open>
+<summary><b>test_69</b> &middot; F200 &middot; <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}/{commitDate}</code></summary>
 
 ```java
     /**
@@ -4760,11 +4450,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-70"></a>
-<details>
-<summary>faults.java#test_70</summary>
+<details open>
+<summary><b>test_70</b> &middot; F200 &middot; <code>GET:/app/api/assignments/data/project-commit/{employeeId}/{projectId}</code></summary>
 
 ```java
     /**
@@ -4796,11 +4488,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-71"></a>
-<details>
-<summary>faults.java#test_71</summary>
+<details open>
+<summary><b>test_71</b> &middot; F200 &middot; <code>DELETE:/app/api/credentials/{id}</code></summary>
 
 ```java
     /**
@@ -4832,11 +4526,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-72"></a>
-<details>
-<summary>faults.java#test_72</summary>
+<details open>
+<summary><b>test_72</b> &middot; F200 &middot; <code>DELETE:/app/api/employees/delete/{id}</code></summary>
 
 ```java
     /**
@@ -4868,11 +4564,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-73"></a>
-<details>
-<summary>faults.java#test_73</summary>
+<details open>
+<summary><b>test_73</b> &middot; F200 &middot; <code>POST:/app/api/employees/save</code></summary>
 
 ```java
     /**
@@ -4913,11 +4611,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-74"></a>
-<details>
-<summary>faults.java#test_74</summary>
+<details open>
+<summary><b>test_74</b> &middot; F200 &middot; <code>PUT:/app/api/projects/update</code></summary>
 
 ```java
     /**
@@ -4957,11 +4657,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-75"></a>
-<details>
-<summary>faults.java#test_75</summary>
+<details open>
+<summary><b>test_75</b> &middot; F200 &middot; <code>POST:/app/api/locations</code></summary>
 
 ```java
     /**
@@ -4995,11 +4697,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-76"></a>
-<details>
-<summary>faults.java#test_76</summary>
+<details open>
+<summary><b>test_76</b> &middot; F200 &middot; <code>POST:/app/api/assignments</code></summary>
 
 ```java
     /**
@@ -5045,11 +4749,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-77"></a>
-<details>
-<summary>faults.java#test_77</summary>
+<details open>
+<summary><b>test_77</b> &middot; F200 &middot; <code>PUT:/app/api/assignments/update</code></summary>
 
 ```java
     /**
@@ -5106,11 +4812,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-78"></a>
-<details>
-<summary>faults.java#test_78</summary>
+<details open>
+<summary><b>test_78</b> &middot; F200 &middot; <code>POST:/app/api/assignments/save</code></summary>
 
 ```java
     /**
@@ -5162,11 +4870,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-79"></a>
-<details>
-<summary>faults.java#test_79</summary>
+<details open>
+<summary><b>test_79</b> &middot; F200 &middot; <code>POST:/app/api/departments</code></summary>
 
 ```java
     /**
@@ -5200,11 +4910,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-80"></a>
-<details>
-<summary>faults.java#test_80</summary>
+<details open>
+<summary><b>test_80</b> &middot; F200 &middot; <code>POST:/app/api/assignments</code></summary>
 
 ```java
     /**
@@ -5260,11 +4972,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-81"></a>
-<details>
-<summary>faults.java#test_81</summary>
+<details open>
+<summary><b>test_81</b> &middot; F200 &middot; <code>PUT:/app/api/credentials</code></summary>
 
 ```java
     /**
@@ -5300,11 +5014,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-82"></a>
-<details>
-<summary>faults.java#test_82</summary>
+<details open>
+<summary><b>test_82</b> &middot; F200 &middot; <code>PUT:/app/api/projects/update</code></summary>
 
 ```java
     /**
@@ -5340,11 +5056,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-83"></a>
-<details>
-<summary>faults.java#test_83</summary>
+<details open>
+<summary><b>test_83</b> &middot; F200 &middot; <code>PUT:/app/api/projects</code></summary>
 
 ```java
     /**
@@ -5380,11 +5098,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-84"></a>
-<details>
-<summary>faults.java#test_84</summary>
+<details open>
+<summary><b>test_84</b> &middot; F200 &middot; <code>POST:/app/api/departments/save</code></summary>
 
 ```java
     /**
@@ -5421,11 +5141,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-85"></a>
-<details>
-<summary>faults.java#test_85</summary>
+<details open>
+<summary><b>test_85</b> &middot; F200 &middot; <code>PUT:/app/api/departments/update</code></summary>
 
 ```java
     /**
@@ -5462,11 +5184,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-86"></a>
-<details>
-<summary>faults.java#test_86</summary>
+<details open>
+<summary><b>test_86</b> &middot; F200 &middot; <code>PUT:/app/api/departments/update</code></summary>
 
 ```java
     /**
@@ -5514,11 +5238,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-87"></a>
-<details>
-<summary>faults.java#test_87</summary>
+<details open>
+<summary><b>test_87</b> &middot; F200 &middot; <code>POST:/app/api/credentials/save</code></summary>
 
 ```java
     /**
@@ -5556,11 +5282,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-88"></a>
-<details>
-<summary>faults.java#test_88</summary>
+<details open>
+<summary><b>test_88</b> &middot; F200 &middot; <code>PUT:/app/api/credentials/update</code></summary>
 
 ```java
     /**
@@ -5598,11 +5326,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-89"></a>
-<details>
-<summary>faults.java#test_89</summary>
+<details open>
+<summary><b>test_89</b> &middot; F200 &middot; <code>POST:/app/api/assignments</code></summary>
 
 ```java
     /**
@@ -5636,11 +5366,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-90"></a>
-<details>
-<summary>faults.java#test_90</summary>
+<details open>
+<summary><b>test_90</b> &middot; F200 &middot; <code>PUT:/app/api/departments/update</code></summary>
 
 ```java
     /**
@@ -5676,11 +5408,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-91"></a>
-<details>
-<summary>faults.java#test_91</summary>
+<details open>
+<summary><b>test_91</b> &middot; F200 &middot; <code>DELETE:/app/api/credentials/{id}</code></summary>
 
 ```java
     /**
@@ -5712,11 +5446,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-92"></a>
-<details>
-<summary>faults.java#test_92</summary>
+<details open>
+<summary><b>test_92</b> &middot; F200 &middot; <code>POST:/app/api/employees</code></summary>
 
 ```java
     /**
@@ -5765,11 +5501,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-93"></a>
-<details>
-<summary>faults.java#test_93</summary>
+<details open>
+<summary><b>test_93</b> &middot; F200 &middot; <code>POST:/app/api/locations</code></summary>
 
 ```java
     /**
@@ -5808,11 +5546,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-94"></a>
-<details>
-<summary>faults.java#test_94</summary>
+<details open>
+<summary><b>test_94</b> &middot; F200 &middot; <code>POST:/app/api/authenticate/</code></summary>
 
 ```java
     /**
@@ -5876,11 +5616,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-95"></a>
-<details>
-<summary>faults.java#test_95</summary>
+<details open>
+<summary><b>test_95</b> &middot; F200 &middot; <code>PUT:/app/api/projects</code></summary>
 
 ```java
     /**
@@ -5919,11 +5661,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-96"></a>
-<details>
-<summary>faults.java#test_96</summary>
+<details open>
+<summary><b>test_96</b> &middot; F200 &middot; <code>PUT:/app/api/locations/update</code></summary>
 
 ```java
     /**
@@ -5962,11 +5706,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-97"></a>
-<details>
-<summary>faults.java#test_97</summary>
+<details open>
+<summary><b>test_97</b> &middot; F200 &middot; <code>POST:/app/api/authenticate/</code></summary>
 
 ```java
     /**
@@ -6032,11 +5778,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-98"></a>
-<details>
-<summary>faults.java#test_98</summary>
+<details open>
+<summary><b>test_98</b> &middot; F200 &middot; <code>POST:/app/api/assignments/save</code></summary>
 
 ```java
     /**
@@ -6092,11 +5840,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-99"></a>
-<details>
-<summary>faults.java#test_99</summary>
+<details open>
+<summary><b>test_99</b> &middot; F200 &middot; <code>PUT:/app/api/departments</code></summary>
 
 ```java
     /**
@@ -6136,11 +5886,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-100"></a>
-<details>
-<summary>faults.java#test_100</summary>
+<details open>
+<summary><b>test_100</b> &middot; F200 &middot; <code>PUT:/app/api/assignments/update</code></summary>
 
 ```java
     /**
@@ -6196,11 +5948,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-101"></a>
-<details>
-<summary>faults.java#test_101</summary>
+<details open>
+<summary><b>test_101</b> &middot; F200 &middot; <code>POST:/app/api/assignments</code></summary>
 
 ```java
     /**
@@ -6249,11 +6003,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-102"></a>
-<details>
-<summary>faults.java#test_102</summary>
+<details open>
+<summary><b>test_102</b> &middot; F200 &middot; <code>PUT:/app/api/locations</code></summary>
 
 ```java
     /**
@@ -6291,11 +6047,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-103"></a>
-<details>
-<summary>faults.java#test_103</summary>
+<details open>
+<summary><b>test_103</b> &middot; F200 &middot; <code>POST:/app/api/departments/save</code></summary>
 
 ```java
     /**
@@ -6336,11 +6094,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-104"></a>
-<details>
-<summary>faults.java#test_104</summary>
+<details open>
+<summary><b>test_104</b> &middot; F200 &middot; <code>POST:/app/api/projects</code></summary>
 
 ```java
     /**
@@ -6376,11 +6136,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-105"></a>
-<details>
-<summary>faults.java#test_105</summary>
+<details open>
+<summary><b>test_105</b> &middot; F200 &middot; <code>POST:/app/api/assignments</code></summary>
 
 ```java
     /**
@@ -6417,11 +6179,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-106"></a>
-<details>
-<summary>faults.java#test_106</summary>
+<details open>
+<summary><b>test_106</b> &middot; F200 &middot; <code>POST:/app/api/departments</code></summary>
 
 ```java
     /**
@@ -6462,11 +6226,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-107"></a>
-<details>
-<summary>faults.java#test_107</summary>
+<details open>
+<summary><b>test_107</b> &middot; F200 &middot; <code>POST:/app/api/assignments</code></summary>
 
 ```java
     /**
@@ -6527,11 +6293,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-108"></a>
-<details>
-<summary>faults.java#test_108</summary>
+<details open>
+<summary><b>test_108</b> &middot; F200 &middot; <code>PUT:/app/api/assignments</code></summary>
 
 ```java
     /**
@@ -6577,11 +6345,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-faults-java-test-109"></a>
-<details>
-<summary>faults.java#test_109</summary>
+<details open>
+<summary><b>test_109</b> &middot; F200 &middot; <code>POST:/app/api/assignments</code></summary>
 
 ```java
     /**
@@ -6630,11 +6400,15 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
+#### successes.java (17)
+
 <a name="test-successes-java-test-0"></a>
-<details>
-<summary>successes.java#test_0</summary>
+<details open>
+<summary><b>test_0</b></summary>
 
 ```java
     /**
@@ -6651,11 +6425,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-1"></a>
-<details>
-<summary>successes.java#test_1</summary>
+<details open>
+<summary><b>test_1</b></summary>
 
 ```java
     /**
@@ -6692,11 +6468,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-2"></a>
-<details>
-<summary>successes.java#test_2</summary>
+<details open>
+<summary><b>test_2</b></summary>
 
 ```java
     /**
@@ -6725,11 +6503,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-3"></a>
-<details>
-<summary>successes.java#test_3</summary>
+<details open>
+<summary><b>test_3</b></summary>
 
 ```java
     /**
@@ -6770,11 +6550,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-4"></a>
-<details>
-<summary>successes.java#test_4</summary>
+<details open>
+<summary><b>test_4</b></summary>
 
 ```java
     /**
@@ -6813,11 +6595,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-5"></a>
-<details>
-<summary>successes.java#test_5</summary>
+<details open>
+<summary><b>test_5</b></summary>
 
 ```java
     /**
@@ -6856,11 +6640,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-6"></a>
-<details>
-<summary>successes.java#test_6</summary>
+<details open>
+<summary><b>test_6</b></summary>
 
 ```java
     /**
@@ -6881,11 +6667,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-7"></a>
-<details>
-<summary>successes.java#test_7</summary>
+<details open>
+<summary><b>test_7</b></summary>
 
 ```java
     /**
@@ -6914,11 +6702,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-8"></a>
-<details>
-<summary>successes.java#test_8</summary>
+<details open>
+<summary><b>test_8</b></summary>
 
 ```java
     /**
@@ -6947,11 +6737,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-9"></a>
-<details>
-<summary>successes.java#test_9</summary>
+<details open>
+<summary><b>test_9</b></summary>
 
 ```java
     /**
@@ -6996,11 +6788,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-10"></a>
-<details>
-<summary>successes.java#test_10</summary>
+<details open>
+<summary><b>test_10</b></summary>
 
 ```java
     /**
@@ -7045,11 +6839,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-11"></a>
-<details>
-<summary>successes.java#test_11</summary>
+<details open>
+<summary><b>test_11</b></summary>
 
 ```java
     /**
@@ -7082,11 +6878,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-12"></a>
-<details>
-<summary>successes.java#test_12</summary>
+<details open>
+<summary><b>test_12</b></summary>
 
 ```java
     /**
@@ -7168,11 +6966,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-13"></a>
-<details>
-<summary>successes.java#test_13</summary>
+<details open>
+<summary><b>test_13</b></summary>
 
 ```java
     /**
@@ -7210,11 +7010,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-14"></a>
-<details>
-<summary>successes.java#test_14</summary>
+<details open>
+<summary><b>test_14</b></summary>
 
 ```java
     /**
@@ -7253,11 +7055,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-15"></a>
-<details>
-<summary>successes.java#test_15</summary>
+<details open>
+<summary><b>test_15</b></summary>
 
 ```java
     /**
@@ -7298,11 +7102,13 @@ Click a test case id in the tables above to jump to its code.
     }
 ```
 
+[&#x2191; back to faults](#user-content-wfc-faults)
+
 </details>
 
 <a name="test-successes-java-test-16"></a>
-<details>
-<summary>successes.java#test_16</summary>
+<details open>
+<summary><b>test_16</b></summary>
 
 ```java
     /**
@@ -7345,5 +7151,7 @@ Click a test case id in the tables above to jump to its code.
                 .body("'location'.'city'", containsString("CHARGUIA"));
     }
 ```
+
+[&#x2191; back to faults](#user-content-wfc-faults)
 
 </details>

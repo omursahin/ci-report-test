@@ -1,0 +1,64 @@
+name: Feature test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  summary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Write job summary
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          <a name="top"></a>
+
+          ## 1. Alerts
+
+          > [!CAUTION]
+          > **529 potential faults** found on 62/67 endpoints.
+
+          > [!TIP]
+          > Download the interactive report from the artifacts.
+
+          > [!NOTE]
+          > Note box.
+
+          > [!WARNING]
+          > Warning box.
+
+          ## 2. Mermaid pie chart
+
+          ```mermaid
+          pie showData title Endpoint status coverage
+              "2XX" : 27
+              "4XX" : 55
+              "No response" : 1
+          ```
+
+          ## 3. Icons and text bars
+
+          | Endpoint | Responses | Faults | Coverage |
+          | --- | --- | --- | --- |
+          | <code>POST /app/api/assignments</code> | &#x1F7E0; 400 | &#x1F534; F200 &times;8 | <code>&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;</code> 40% |
+          | <code>GET /app/api/assignments</code> | &#x1F7E2; 200 | &#x2705; none | <code>&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2591;&#x2591;</code> 82% |
+          | <code>GET /app/api/health</code> | &#x26AA; no response | &#x2705; none | <code>&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;&#x2591;</code> 0% |
+
+          ## 4. Open details and back link
+
+          [Jump to test_65](#user-content-test-65)
+
+          EOF
+          for i in $(seq 1 80); do echo "filler line $i" >> "$GITHUB_STEP_SUMMARY"; echo "" >> "$GITHUB_STEP_SUMMARY"; done
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          <a name="test-65"></a>
+          <details open>
+          <summary><b>test_65</b> &middot; F200 &middot; <code>DELETE /app/api/assignments/{id}</code></summary>
+
+          ```java
+          @Test public void test_65() { }
+          ```
+
+          [&#x2191; back to top](#user-content-top)
+
+          </details>
+          EOF
